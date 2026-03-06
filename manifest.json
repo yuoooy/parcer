@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "MVD Auto Filter Fix",
+  "version": "4.1",
+  "permissions": ["storage", "downloads", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
